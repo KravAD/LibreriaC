@@ -20,6 +20,9 @@ int main(){
     printf("El valor absoluto de %d es %d\n ", num2, abs_num2);
     printf("El valor absoluto de %d es %d\n ", num3, abs_num3);
 
+    printf("El numero aleatorio es %d\n", numero_aleatorio);
+
+
 
     return 0;
 }
