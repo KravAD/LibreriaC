@@ -16,6 +16,8 @@ int main () {
             return 1;
         }
 
+        fpritf(file2, "Hola GEOVANNY\n");
+
         fclose(file);
 
     return 0;
