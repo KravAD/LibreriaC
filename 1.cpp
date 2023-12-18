@@ -14,10 +14,11 @@ int main(){
 
     srand(time(0));
 
+    int numero_aleatorio = rand();
+
     printf("El valor absoluto de %d es %d\n ", num1, abs_num1);
     printf("El valor absoluto de %d es %d\n ", num2, abs_num2);
     printf("El valor absoluto de %d es %d\n ", num3, abs_num3);
-
 
 
     return 0;
