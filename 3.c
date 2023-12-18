@@ -3,22 +3,32 @@
 
 int main () {
 
-    FILE *file = fopen("file.txt", "r");
+    FILE *file = fopen("file.txt", "w");
+    if (file == NULL) {
+        printf("El archivo no se pudo abrir para escritura.\n");
+        return 1;
+    }
 
-        if (file == NULL) {
-            printf("El archivo no se abre.\n");
-            return 1;
-        }
+    fprintf(file, "Hola, mundo!\n");
 
-        FILE *file2 = fopen("file.txt","w");
-        if (file == NULL){
-            printf("El archivo no se pudo abrir para escribir.\n");
-            return 1;
-        }
 
-        fpritf(file2, "Hola GEOVANNY\n");
+    fclose(file);
 
-        fclose(file);
+
+    file = fopen("file.txt", "r");
+    if (file == NULL) {
+        printf("El archivo no se pudo abrir para lectura.\n");
+        return 1;
+    }
+
+    char buffer[50];
+    fscanf(file, "%s", buffer);
+
+    printf("Leído del archivo: %s\n", buffer);
+
+ 
+    fclose(file);
 
     return 0;
+
 }
