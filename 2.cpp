@@ -17,5 +17,7 @@ int main() {
             printf("Las cadenas son distintas");
         }
 
+    int longitud = strlen(string3);
+    
     return 0;
 }
